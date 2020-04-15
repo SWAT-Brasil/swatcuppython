@@ -1,0 +1,53 @@
+2      : number of observed variables
+
+pet_1  : this is the name of variable in output.hru to be extracted along with the number of hru
+17     : number of data points for this variable as it follows below. First column is a sequential number from 1 with missing values missing 
+       : as shown, second column is variable name and date, third column is variable value. Same format is repeated for all other variables
+
+4	pet_1_1977.4	130.5913
+5	pet_1_1977.5	100.8188
+10	pet_1_1977.10	91.906
+11	pet_1_1977.11	60.4995
+12	pet_1_1977.12	60.3348
+13	pet_1_1978.1	20.5686
+14	pet_1_1978.2	10.7132
+15	pet_1_1978.3	80.4877
+16	pet_1_1978.4	140.5748
+17	pet_1_1978.5	92.199
+18	pet_1_1978.6	90.5848
+19	pet_1_1978.7	140.1127
+20	pet_1_1978.8	150.0012
+21	pet_1_1978.9	90.8347
+22	pet_1_1978.10	90.1539
+23	pet_1_1978.11	60.3731
+24	pet_1_1978.12	100.1817
+
+
+et_3  : this is the name of variable in output.hru to be extracted along with the number of hru
+22    : number of data points for this variable as it follows below. First column is a sequential number from 1 with missing values missing 
+      : as shown, second column is variable name and date, third column is variable value. Same format is repeated for all other variables
+
+1	et_3_1977.1		30.096
+2	et_3_1977.2		60.0795
+3	et_3_1977.3		70.302
+4	et_3_1977.4		80.5595
+5	et_3_1977.5		131.209
+6	et_3_1977.6		160.2272
+7	et_3_1977.7		120.279
+8	et_3_1977.8		20.1025
+9	et_3_1977.9		110.4498
+10	et_3_1977.10	82.495
+11	et_3_1977.11	80.2158
+12	et_3_1977.12	30.5395
+13	et_3_1978.1		50.6757
+14	et_3_1978.2		50.7327
+15	et_3_1978.3		120.6976
+16	et_3_1978.4		111.269
+17	et_3_1978.5		133.83
+18	et_3_1978.6		150.8387
+19	et_3_1978.7		140.1601
+20	et_3_1978.8		100.0011
+21	et_3_1978.9		120.6769
+22	et_3_1978.10	80.2186
+
+

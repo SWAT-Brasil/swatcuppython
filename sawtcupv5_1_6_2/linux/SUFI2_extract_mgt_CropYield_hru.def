@@ -1,0 +1,33 @@
+SUFI2          :program
+output.mgt     : swat output file name
+3              : number of crops to get
+CANP WWHT CORN : crop names (as many as the above number)
+
+1              : total number of subbasins in the project
+
+10              : total number of hrus in the project
+
+4          : number of hrus to get for the first variable
+2 4 6 8              : subbasin number(s) for the first variable
+
+
+4              : number of HRUs to get for the second variable (if not needed delete this and the next line)
+2 4 6 8               : subbasin number(s) for the second variable (ALL subs can also be extracted)
+
+
+4              : number of HRUs to get for the second variable (if not needed delete this and the next line)
+2 4 6 8               : subbasin number(s) for the second variable (ALL subs can also be extracted)
+
+
+1969           : beginning year of simulation not including the warm up period
+2012           : end year of simulation
+
+ 
+
+
+
+//Remarks
+
+
+
+

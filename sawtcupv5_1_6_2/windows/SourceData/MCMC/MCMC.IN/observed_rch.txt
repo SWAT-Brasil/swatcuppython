@@ -1,0 +1,58 @@
+2     : number of observed variables
+
+q_1   : this is the name of variable in output.hru to be extracted along with the number of hru
+21    : number of data points for this variable as it follows below. First column is a sequential number from 1 with missing values missing 
+      : as shown, second column is variable name and date, third column is variable value. Same format is repeated for all other variables
+
+4	q_1_1977.4	0.5913
+5	q_1_1977.5	0.8188
+6     q_1_1977.6	0.3899
+7     q_1_1977.7  0.2955
+8     q_1_1977.8  0.1019
+9     q_1_1977.9  0.2147
+10	q_1_1977.10	1.906
+11	q_1_1977.11	0.4995
+12	q_1_1977.12	0.3348
+13	q_1_1978.1	0.5686
+14	q_1_1978.2	0.7132
+15	q_1_1978.3	0.4877
+16	q_1_1978.4	0.5748
+17	q_1_1978.5	2.199
+18	q_1_1978.6	0.5848
+19	q_1_1978.7	0.1127
+20	q_1_1978.8	0.0012
+21	q_1_1978.9	0.8347
+22	q_1_1978.10	0.1539
+23	q_1_1978.11	0.3731
+24	q_1_1978.12	0.1817
+
+
+q_2   : this is the name of variable in output.hru to be extracted along with the number of hru
+24    : number of data points for this variable as it follows below. First column is a sequential number from 1 with missing values missing 
+      : as shown, second column is variable name and date, third column is variable value. Same format is repeated for all other variables
+
+1	q_2_1977.1	0.096
+2	q_2_1977.2	0.0795
+3	q_2_1977.3	0.302
+4	q_2_1977.4	0.5595
+5	q_2_1977.5	1.209
+6	q_2_1977.6	0.2272
+7	q_2_1977.7	0.279
+8	q_2_1977.8	0.1025
+9	q_2_1977.9	0.4498
+10	q_2_1977.10	2.495
+11	q_2_1977.11	0.2158
+12	q_2_1977.12	0.5395
+13	q_2_1978.1	0.6757
+14	q_2_1978.2	0.7327
+15	q_2_1978.3	0.6976
+16	q_2_1978.4	1.269
+17	q_2_1978.5	3.83
+18	q_2_1978.6	0.8387
+19	q_2_1978.7	0.1601
+20	q_2_1978.8	0.0011
+21	q_2_1978.9	0.6769
+22    q_2_1978.10 0.2186 
+23    q_2_1978.11 0.254
+24	q_2_1978.12	0.2531
+

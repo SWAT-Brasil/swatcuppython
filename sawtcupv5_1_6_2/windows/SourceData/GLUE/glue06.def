@@ -1,0 +1,16 @@
+//definition file for glue program
+MaxSimulation		30		        //
+ParDefFile		GLUE.IN\glue_par.def	//parameter definition file
+ObjfunThresh		0.2		        //threshold to seperate the behavioural from the non-behavioural
+Percentile		0.025		        //percentile to calculate the quantiles of behavioural model results
+ModelInFile		model.in		//model.in (internal file)
+ModelOutFile		model.out	        //model.out (internal file)
+ModelCmd		glue_run.cmd	        //bach file executed during GLUE run
+ModelObjfunFile	F	GLUE.IN\glue_obs.dat 	//F=obs.dat & Nash-Sutfliffe //T=objective function by user
+ModelParaSet		GLUE.OUT\modelpara.out	//parameter output
+ModelBehParaset		GLUE.OUT\modelpara.beh	//behavioural parameter set
+ModelResult	T	GLUE.OUT\modelres.out	//output results
+ModelBehResult		GLUE.OUT\modelres.beh	//behavioural result
+ModelResQaunt	T	GLUE.OUT\modelquant.out	//output of the quantile (95% prediction uncertainty, 95PPU)
+
+

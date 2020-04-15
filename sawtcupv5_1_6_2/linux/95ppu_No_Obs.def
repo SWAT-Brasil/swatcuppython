@@ -1,0 +1,34 @@
+SUFI2    :name of optimization program: SUFI2, Para_Sol, GLUE, PSO, MCMC
+23       : number of variables to calculate 95PPU for without any observations
+
+         :variable names, which should be the same as simulation file names:
+GRAS_1.txt
+GRAS_2.txt
+GRAS_3.txt
+SHRB_1.txt
+SHRB_2.txt
+SHRB_3.txt
+SHRB_4.txt
+SHRB_5.txt
+SHRB_6.txt
+SHRB_7.txt
+SHRB_8.txt
+SHRB_9.txt
+SHRB_10.txt
+SHRB_11.txt
+SHRB_12.txt
+SHRB_13.txt
+SHRB_14.txt
+SHRB_15.txt
+SHRB_16.txt
+SHRB_17.txt
+SHRB_18.txt
+SHRB_19.txt
+SHRB_20.txt
+
+144            : number of data points or simulation time steps
+
+
+
+
+// Remarks

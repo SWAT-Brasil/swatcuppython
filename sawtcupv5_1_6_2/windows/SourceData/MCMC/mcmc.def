@@ -1,0 +1,18 @@
+Model                   External
+External_ModelInFile    model.in        //parameter file generated internally
+External_ModelOutFile   model.out       //simulation file created internally
+External_ModelExecFile  mcmc_run.bat    //batch file to start mcmc
+
+ParDefFile             MCMC.IN\mcmc_par.def      //parameter definition file to be prepared by user
+PriorDistFile          MCMC.IN\mcmc_prior.def    //parameter priors to be prepared by user
+LikeliDefFile          MCMC.IN\mcmc_obs.dat      //observation file to be prepared by user
+JumpDistFile           MCMC.IN\mcmc_jump.def     //jump distribution file to be prepared by user
+SampSize               100                        //number of run to be made by mcmc
+
+ResValFile	                 mcmc_best.out               //best solution
+ResidValFile	             mcmc_resid.out              //residual of best solution
+PostMarkovChainParSampFile   MCMC.OUT\mcmc_parsamp.out   //Markov Chain of parameters
+PostMarkovChainParQuantFile  MCMC.OUT\mcmc_parquant.out  //quantiles of parameter distribution
+PostMarkovChainResSampFile   MCMC.OUT\mcmc_ressamp.out   //Markov Chain of result
+PostMarkovChainResQuantFile  MCMC.OUT\mcmc_resquant.out  //quantile of Markov Chain residuals
+PostMarkovChainPdfSampFile   MCMC.OUT\mcmc_pdfsamp.out   //Markov Chain of pdf of posterior

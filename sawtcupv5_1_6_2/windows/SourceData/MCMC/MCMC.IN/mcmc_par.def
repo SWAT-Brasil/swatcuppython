@@ -1,0 +1,14 @@
+Name	Value	Minimum	Maximum	Scale	UncRange	Increment	ActSens	ActEstim	Unit	Description
+r__CN2.mgt	      0.019868758	-0.1	0.1	0.3	0.03	0.03	T	T	0.2	
+r__ALPHA_BF.gw	-0.22235444	-0.85	0.2	0.32	0.032	0.0325	T	T	0.2	
+r__GW_DELAY.gw	0.43972221	-0.2	0.9	0.35	0.035	0.035	T	T	0.9	
+r__CH_N2.rte	-0.3558776	-0.8	0.8	1	0.1	0.1	T	T	0.8	
+v__CH_K2.rte	5.8850619	1	10	5.5	0.55	0.55	T	T	10	
+r__SOL_AWC(1).sol	0.20442666	-0.2	0.6	0.2	0.02	0.02	T	T	0.6	
+r__SOL_K(1).sol	-0.23961648	-0.9	0.3	0.3	0.03	0.03	T	T	0.3	
+r__SOL_BD(1).sol	0.18116852	-0.1	0.4	0.15	0.015	0.015	T	T	0.4	
+v__SFTMP.bsn	1.2487128	0.2	3	1.6	0.16	0.16	T	T	3	
+v__SMTMP.bsn	0.40192473	-0.5	1.5	0.5	0.05	0.05	T	T	1.5	
+Lamda1	      0.5	0	1	1	0.1	0.1	F	F		
+Lamda2	      0	0	10	1	0.1	0.1	F	F		
+Std_Dev_Out	      1	0.1	10	1	0.1	0.1	F	F		

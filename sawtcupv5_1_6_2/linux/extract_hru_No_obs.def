@@ -1,0 +1,22 @@
+SUFI2          : SWAT-CUP program: SUFI2, GLUE, ParaSol, PSO, MCMC
+output.hru     : swat output file name
+2              : number of variables to get (such as: discharge, sediment, ET etc.)
+10  11         : variable column number(s) in the swat output file (as many as the number above)
+
+4              : total number of HRUs in the project
+
+1              : number of HRUs to get for the first variable
+2              : HRU numbers for the first variable. Write "All" if equal to the total number of HRUs
+
+2              : number of HRUs to get for the second variable
+3 4            : HRU numbers for the second variable. Write "All" if equal to the total number of HRUs
+
+1977           : beginning year of simulation not including warm up period
+1978           : end year of simulation
+
+2              : time step (1=daily, 2=monthly, 3=yearly)
+
+
+
+
+/**** Remark

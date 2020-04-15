@@ -1,0 +1,92 @@
+Echo of MCMC_extract_rch.cpp
+--------------------------------------
+Max. size of arrays:
+Max number of observed variables= 30
+Max number of subbasins=          10,000
+Max number of observed data=      60,000
+--------------------------------------
+
+-------------------- Reading MCMC_extract_rch.def --------------
+swat file name=   output.rch
+number of variables= 1
+column number of variables=  7  
+total reaches in the project= 4
+number of reaches for variable 1=  2
+reach numbers for variable 1=  1  2  
+
+total number of rchs to get=  2
+beg_sim_year=  1977
+end_sim_year=  1978
+time_step=  2
+--------------------  end of reading def file --------------
+****   MCMC_obs.txt   ***********
+total number of variables=  2
+   21
+   24
+****   Time_Array   ***********
+
+var= 1 
+     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22    23    24
+
+
+var= 2 
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21
+    22    23    24
+-------------------------------------
+
+
+
+variable no:    1 ----------------------   
+variable= 1  
+ time_step= 2  year= 1977   end= 12
+---------------------------------------------------------
+variable= 1  year= 1977  d= 1  file_no=1
+variable= 1  year= 1977  d= 1  file_no=2
+variable= 1  year= 1977  d= 2  file_no=1
+variable= 1  year= 1977  d= 2  file_no=2
+variable= 1  year= 1977  d= 3  file_no=1
+variable= 1  year= 1977  d= 3  file_no=2
+variable= 1  year= 1977  d= 4  file_no=1
+variable= 1  year= 1977  d= 4  file_no=2
+variable= 1  year= 1977  d= 5  file_no=1
+variable= 1  year= 1977  d= 5  file_no=2
+variable= 1  year= 1977  d= 6  file_no=1
+variable= 1  year= 1977  d= 6  file_no=2
+variable= 1  year= 1977  d= 7  file_no=1
+variable= 1  year= 1977  d= 7  file_no=2
+variable= 1  year= 1977  d= 8  file_no=1
+variable= 1  year= 1977  d= 8  file_no=2
+variable= 1  year= 1977  d= 9  file_no=1
+variable= 1  year= 1977  d= 9  file_no=2
+variable= 1  year= 1977  d= 10  file_no=1
+variable= 1  year= 1977  d= 10  file_no=2
+variable= 1  year= 1977  d= 11  file_no=1
+variable= 1  year= 1977  d= 11  file_no=2
+variable= 1  year= 1977  d= 12  file_no=1
+variable= 1  year= 1977  d= 12  file_no=2
+ time_step= 2  year= 1978   end= 12
+---------------------------------------------------------
+variable= 1  year= 1978  d= 1  file_no=1
+variable= 1  year= 1978  d= 1  file_no=2
+variable= 1  year= 1978  d= 2  file_no=1
+variable= 1  year= 1978  d= 2  file_no=2
+variable= 1  year= 1978  d= 3  file_no=1
+variable= 1  year= 1978  d= 3  file_no=2
+variable= 1  year= 1978  d= 4  file_no=1
+variable= 1  year= 1978  d= 4  file_no=2
+variable= 1  year= 1978  d= 5  file_no=1
+variable= 1  year= 1978  d= 5  file_no=2
+variable= 1  year= 1978  d= 6  file_no=1
+variable= 1  year= 1978  d= 6  file_no=2
+variable= 1  year= 1978  d= 7  file_no=1
+variable= 1  year= 1978  d= 7  file_no=2
+variable= 1  year= 1978  d= 8  file_no=1
+variable= 1  year= 1978  d= 8  file_no=2
+variable= 1  year= 1978  d= 9  file_no=1
+variable= 1  year= 1978  d= 9  file_no=2
+variable= 1  year= 1978  d= 10  file_no=1
+variable= 1  year= 1978  d= 10  file_no=2
+variable= 1  year= 1978  d= 11  file_no=1
+variable= 1  year= 1978  d= 11  file_no=2
+variable= 1  year= 1978  d= 12  file_no=1
+variable= 1  year= 1978  d= 12  file_no=2

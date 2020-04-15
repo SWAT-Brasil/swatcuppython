@@ -1,0 +1,24 @@
+1       : number of observed variables
+
+SURQ_1  : this is the name of variable in output.hru to be extracted along with the number of hru    
+17      : number of data points for this variable as it follows below. First column is a seSURQuential number from 1 with missing values missing 
+        : as shown, second column is variable name and date, third column is variable value. Same format is repeated for all other variables
+
+4	SURQ_1_1977.4	120.5913
+5	SURQ_1_1977.5	90.8188
+10	SURQ_1_1977.10	81.906
+11	SURQ_1_1977.11	60.4995
+12	SURQ_1_1977.12	70.3348
+13	SURQ_1_1978.1	20.5686
+14	SURQ_1_1978.2	10.7132
+15	SURQ_1_1978.3	80.4877
+16	SURQ_1_1978.4	130.5748
+17	SURQ_1_1978.5	92.199
+18	SURQ_1_1978.6	100.5848
+19	SURQ_1_1978.7	130.1127
+20	SURQ_1_1978.8	80.0012
+21	SURQ_1_1978.9	70.8347
+22	SURQ_1_1978.10	60.1539
+23	SURQ_1_1978.11	40.3731
+24	SURQ_1_1978.12	110.1817
+

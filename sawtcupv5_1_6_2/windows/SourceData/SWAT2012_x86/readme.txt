@@ -1,0 +1,1 @@
+swat2012 32-bit is in this directory

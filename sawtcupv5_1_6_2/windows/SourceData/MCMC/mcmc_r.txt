@@ -1,0 +1,46 @@
+# load library:
+# -------------
+
+source("uncsim_aux.r")
+
+
+# specify file names:
+# -------------------
+
+file_parsamp  <- "mcmc_parsamp.out"
+file_prior    <- "mcmc_prior.def"
+file_jump_new <- "mcmc_jump_new.def"
+
+
+# read definitions and results:
+# -----------------------------
+
+parsamp  <- uncsim.read.samp(file_parsamp)
+priordef <- uncsim.read.dist(file_prior)
+
+
+# plot distributions and chains:
+# ------------------------------
+
+uncsim.plot.chains(parsamp)
+
+uncsim.plot.margs(parsamp)
+
+#uncsim.plot.margs(parsamp,priordef,
+#                  xlim=list(r__CH_N2.rte=c(-0.5,0.5),
+#                            r__CN2.mgt=c(-0.5,0.5)))
+
+
+
+
+
+# improve jump distribution:
+# --------------------------
+
+fact.sd      <- 0.5
+fract.burnin <- 0.2
+uncsim.jump.dist(parsamp,file_jump_new,fact.sd,fract.burnin)
+
+
+
+

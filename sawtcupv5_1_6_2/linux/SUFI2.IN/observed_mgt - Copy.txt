@@ -1,0 +1,212 @@
+12     : number of observed variables		
+		
+CANP_2  : this is the name of the variable and the hru number to be included in the objective function		
+9      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+6	Yld_1974	1687.28
+10	Yld_1978	2220.75
+14	Yld_1982	2503.8
+22	Yld_1990	1869.75
+26	Yld_1994	1176.75
+30	Yld_1998	2918.25
+34	Yld_2002	2956.3
+38	Yld_2006	2599.29
+42	Yld_2010	2158.82
+		
+		
+		
+CANP_4  : this is the name of the variable and the hru number to be included in the objective function		
+9      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+6	Yld_1974	1638.23
+10	Yld_1978	2397.38
+14	Yld_1982	2761.09
+22	Yld_1990	2066.63
+26	Yld_1994	1183.5
+30	Yld_1998	2975.63
+34	Yld_2002	2938.68
+38	Yld_2006	2180.93
+42	Yld_2010	1716.95
+		
+		
+CANP_6  : this is the name of the variable and the hru number to be included in the objective function		
+9      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+6	Yld_1974	1744.875
+10	Yld_1978	2208.375
+14	Yld_1982	2723.063
+22	Yld_1990	1982.25
+26	Yld_1994	1269
+30	Yld_1998	3080.25
+34	Yld_2002	2901.075
+38	Yld_2006	2136.628
+42	Yld_2010	2229.758
+		
+		
+CANP_8  : this is the name of the variable and the hru number to be included in the objective function		
+9      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+6	Yld_1974	1847.925
+10	Yld_1978	1969.875
+14	Yld_1982	2851.088
+22	Yld_1990	1904.625
+26	Yld_1994	1093.5
+30	Yld_1998	2730.375
+34	Yld_2002	2780.05
+38	Yld_2006	1961.271
+42	Yld_2010	1865.913
+ 		
+		
+WWHT_2  : this is the name of the variable and the hru number to be included in the objective function		
+17    : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+5	Yld_1973	4734.075
+7	Yld_1995	3988.731
+13	Yld_1981	4148.213
+15	Yld_1983	4034.313
+17	Yld_1985	3745.313
+19	Yld_1987	4127.813
+21	Yld_1989	4311.625
+23	Yld_1991	5336.938
+27	Yld_1995	4945.938
+29	Yld_1997	3559.375
+31	Yld_1999	4271.25
+35	Yld_2003	4696.25
+37	Yld_2005	3809.391
+39	Yld_2007	4457.815
+41	Yld_2009	3786.833
+43	Yld_2011	4172.519
+45	Yld_2013	2237.889
+		
+		
+		
+WWHT_4  : this is the name of the variable and the hru number to be included in the objective function		
+17    : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+5	Yld_1973	4778.488
+7	Yld_1995	3357.288
+13	Yld_1981	4717.713
+15	Yld_1983	4274.438
+17	Yld_1985	3929.125
+19	Yld_1987	4457.188
+21	Yld_1989	4175.625
+23	Yld_1991	5624.875
+27	Yld_1995	5530.313
+29	Yld_1997	3759.125
+31	Yld_1999	4701.563
+35	Yld_2003	4801.438
+37	Yld_2005	3503.741
+39	Yld_2007	4616.619
+41	Yld_2009	2730.384
+43	Yld_2011	4039.856
+45	Yld_2013	1862.798
+		
+		
+WWHT_6  : this is the name of the variable and the hru number to be included in the objective function		
+17    : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+5	Yld_1973	4772.538
+7	Yld_1995	3500.938
+13	Yld_1981	4645.781
+15	Yld_1983	4094.875
+17	Yld_1985	3981.188
+19	Yld_1987	4378.563
+21	Yld_1989	4366.875
+23	Yld_1991	5840.563
+27	Yld_1995	5289.125
+29	Yld_1997	3528.563
+31	Yld_1999	4717.5
+35	Yld_2003	4347.75
+37	Yld_2005	3940.97
+39	Yld_2007	4750.583
+41	Yld_2009	3258.257
+43	Yld_2011	4320.691
+45	Yld_2013	2144.703
+		
+		
+WWHT_8  : this is the name of the variable and the hru number to be included in the objective function		
+17    : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+5	Yld_1973	4453.788
+7	Yld_1995	3604
+13	Yld_1981	4929.044
+15	Yld_1983	4535.813
+17	Yld_1985	3860.063
+19	Yld_1987	4490.125
+21	Yld_1989	4381.75
+23	Yld_1991	5887.313
+27	Yld_1995	5743.875
+29	Yld_1997	3440.375
+31	Yld_1999	4698.375
+35	Yld_2003	4227.688
+37	Yld_2005	3672.008
+39	Yld_2007	4799.822
+41	Yld_2009	3642.617
+43	Yld_2011	4427.172
+45	Yld_2013	2264.879
+		
+		
+		
+CORN_2  : this is the name of the variable and the hru number to be included in the objective function		
+8      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+16	Yld_1984	5253
+20	Yld_1988	5190.313
+24	Yld_1992	3492.438
+28	Yld_1996	7192.063
+32	Yld_2000	7670.188
+36	Yld_2004	8061.691
+40	Yld_2008	6169.067
+44	Yld_2012	9702.916
+		
+		
+		
+CORN_4  : this is the name of the variable and the hru number to be included in the objective function		
+8      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+16	Yld_1984	4392.375
+20	Yld_1988	6217.75
+24	Yld_1992	3350.063
+28	Yld_1996	7536.313
+32	Yld_2000	8052.688
+36	Yld_2004	8304.16
+40	Yld_2008	3816.995
+44	Yld_2012	9646.612
+		
+		
+CORN_6  : this is the name of the variable and the hru number to be included in the objective function		
+8      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+16	Yld_1984	4786.563
+20	Yld_1988	6581.125
+24	Yld_1992	3401.063
+28	Yld_1996	8016.563
+32	Yld_2000	7985.75
+36	Yld_2004	8242.107
+40	Yld_2008	5894.866
+44	Yld_2012	10249.01
+		
+		
+CORN_8  : this is the name of the variable and the hru number to be included in the objective function		
+8      : number of data points for this variable as it follows below. First column is a sequential number from beginning 		
+      : of the simulation, second column is variable name and date (format arbitrary), third column is variable value. 		
+		
+16	Yld_1984	5417.688
+20	Yld_1988	6481.25
+24	Yld_1992	2517.063
+28	Yld_1996	7472.563
+32	Yld_2000	8226.938
+36	Yld_2004	7887.899
+40	Yld_2008	6347.923
+44	Yld_2012	11121.02

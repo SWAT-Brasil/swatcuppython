@@ -1,0 +1,13 @@
+13     ! number of parameter to be optimized
+   30     !  max no. of trials allowed before optimization is terminated
+    3     !  maximum number of shuffling loops in which the criterion value ...
+ 0.01     !  percentage by which the criterion value must change...
+   10     !  number of complexes in the initial population
+ 1675     !  initial random seed
+    5     !  number of points in each complex
+    3     !  number of points in a sub-complex
+    5     !  number of evolution steps allowed for each complex before complex shuffling
+    1     !  istep (1=running optimisation, 2= rerun good parameter sets)
+    1     !  istat, Statistical method for ParaSol (1=Chi-squared; 2=Bayesian)
+    3     !  iprob, when iprob=1 90% probability ; iprob=2 95% probability; iprob=3 97.5% probability
+    0     !  iflag, Flag indicating whether the objective functions are to be calculated by ParaSol or read from �modelof.out�
