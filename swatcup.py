@@ -7,6 +7,7 @@ import platform
 from swatcuppython.swatcupversion import SWATCUPVersion
 from swatcuppython.operationalsystem import OperationalSystem
 from swatcuppython.sawtcupv5_1_6_2.swatcupv5_1_6_2 import SWATCUPv5_1_6_2
+from swatcuppython.swatcup2019.swatcup2019 import SWATCUP2019
 
 logger = logging.getLogger(__name__)
 
@@ -65,6 +66,13 @@ class SWATCUP(object):
                 self.wrapper = SWATCUPv5_1_6_2(OperationalSystem.LINUX)
             elif self.operational_system == OperationalSystem.WINDOWS.value:
                 self.wrapper = SWATCUPv5_1_6_2(OperationalSystem.WINDOWS)
+
+        if version == SWATCUPVersion.SWATCUP2019:
+            if self.operational_system == OperationalSystem.LINUX.value:
+                raise ValueError("Linux not working")
+            elif self.operational_system == OperationalSystem.WINDOWS.value:
+                self.wrapper = SWATCUP2019(OperationalSystem.WINDOWS)
+
 
         logger.info("Using SWATCUPPython module: " + self.wrapper.get_version())
 

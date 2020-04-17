@@ -27,6 +27,8 @@ nomes de arquivos de forma consistente.
 ## TODO
 - Processamento paralelo
 - Funcionar no Windows
+- Fazer um check entre o numero de rodadas do par_inf e swEDIT, eles precisam 
+ser iguais e é uma boa fonte de erro
 
 
 ## Processamento paralelo
