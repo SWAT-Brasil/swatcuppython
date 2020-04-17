@@ -48,16 +48,16 @@ class SWATCUP2019(ModuleInterface):
         logger.debug("Running sufi2_pre")
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Pre.bat", "SUFI2_Pre.bat"))
-            return subprocess.call(cmd, cwd=path, shell=False)
+            return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Pre.bat")
-            return subprocess.call([cmd], cwd=path)
+            return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def sufi2_run(self, path):
         logger.debug("Running sufi2_run")
         if self.linux():
             cmd = os.path.join(path, "SUFI2_Run.bat")
-            return subprocess.call(cmd, cwd=path, shell=False)
+            return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Run.bat")
             return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -66,10 +66,10 @@ class SWATCUP2019(ModuleInterface):
         logger.debug("Running sufi2_post")
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Post.bat", "SUFI2_Post.bat"))
-            return subprocess.call(cmd, cwd=path, shell=False)
+            return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Post.bat")
-            return subprocess.call([cmd], cwd=path)
+            return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def sufi2_async_pre(self, path):
         if self.linux():
