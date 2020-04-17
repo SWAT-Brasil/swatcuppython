@@ -69,7 +69,7 @@ class SWATCUP(object):
 
         if version == SWATCUPVersion.SWATCUP2019:
             if self.operational_system == OperationalSystem.LINUX.value:
-                raise ValueError("Linux not working")
+                self.wrapper = SWATCUP2019(OperationalSystem.LINUX)
             elif self.operational_system == OperationalSystem.WINDOWS.value:
                 self.wrapper = SWATCUP2019(OperationalSystem.WINDOWS)
 
