@@ -51,7 +51,8 @@ class SWATCUP2019(ModuleInterface):
             return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Pre.bat")
-            return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            #return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            return subprocess.call([cmd], cwd=path)
 
     def sufi2_run(self, path):
         logger.debug("Running sufi2_run")
@@ -60,6 +61,7 @@ class SWATCUP2019(ModuleInterface):
             return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Run.bat")
+            logger.info('Opening another window, otherwise swat-edit does not work')
             return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def sufi2_post(self, path):
@@ -69,7 +71,8 @@ class SWATCUP2019(ModuleInterface):
             return subprocess.call(cmd, cwd=path, shell=True)
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Post.bat")
-            return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            #return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            return subprocess.call([cmd], cwd=path)
 
     def sufi2_async_pre(self, path):
         if self.linux():
@@ -94,8 +97,6 @@ class SWATCUP2019(ModuleInterface):
                 logger.warning("Ooopps, SUFI2.OUT folder is not empty. SUFI2_Pre.bat may not be working! " +
                                "Deleting file: " + os.path.join(sufi2_out_folder, f))
                 os.remove(os.path.join(sufi2_out_folder, f))
-
-
             return process
 
     def sufi2_async_run(self, path):
@@ -108,7 +109,7 @@ class SWATCUP2019(ModuleInterface):
             return subprocess.Popen([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def sufi2_async_post(self, path):
-        logger.debug("Runnnig sufi2_async_post")
+        logger.debug("Running sufi2_async_post")
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Post.bat", "SUFI2_Post.bat"))
             return subprocess.Popen(cmd, cwd=path, shell=True, stdout=subprocess.DEVNULL)
