@@ -22,13 +22,17 @@ problema se deve ao fato de no Windows a caixa de texto não é importante ao li
 nome dos arquivos, e no Linux sim. Como o desenvolvimento do SWATCUP foi inicialmente
 em Windows, os desenvolvedores não devem ter notado que não estava utilizando os 
 nomes de arquivos de forma consistente.
-
+- O resultado é diferente rodando em linux ou em windows. O SUFI2_Pre gera parametros
+iguais para cada variavel, mas combina ele de forma diferente. Para um mesmo conjunto
+de parametros os valores de saída são próximos, mas não iguais. A implementação deve ser 
+ligeiramente diferente.
 
 ## TODO
 - Processamento paralelo
 - Funcionar no Windows
 - Fazer um check entre o numero de rodadas do par_inf e swEDIT, eles precisam 
 ser iguais e é uma boa fonte de erro
+
 
 
 ## Processamento paralelo
