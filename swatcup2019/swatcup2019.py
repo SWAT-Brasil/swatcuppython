@@ -1,5 +1,6 @@
 import logging
 import stat
+import sys
 import time
 from abc import ABC
 
@@ -49,7 +50,11 @@ class SWATCUP2019(ModuleInterface):
         logger.debug("Running sufi2_pre")
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Pre.bat", "SUFI2_Pre.bat"))
-            return subprocess.call(cmd, cwd=path, shell=True)
+            #return subprocess.call(cmd, cwd=path, shell=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            for line in process.stdout:
+                sys.stdout.write(line)
+            return process.returncode
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Pre.bat")
             #return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
@@ -59,7 +64,11 @@ class SWATCUP2019(ModuleInterface):
         logger.debug("Running sufi2_run")
         if self.linux():
             cmd = os.path.join(path, "SUFI2_Run.bat")
-            return subprocess.call(cmd, cwd=path, shell=True)
+            #return subprocess.call(cmd, cwd=path, shell=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            for line in process.stdout:
+                sys.stdout.write(line)
+            return process.returncode
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Run.bat")
             logger.info('Opening another window, otherwise swat-edit does not work')
@@ -69,7 +78,11 @@ class SWATCUP2019(ModuleInterface):
         logger.debug("Running sufi2_post")
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Post.bat", "SUFI2_Post.bat"))
-            return subprocess.call(cmd, cwd=path, shell=True)
+            #return subprocess.call(cmd, cwd=path, shell=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            for line in process.stdout:
+                sys.stdout.write(line)
+            return process.returncode
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Post.bat")
             #return subprocess.call([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
