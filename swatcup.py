@@ -78,7 +78,7 @@ class SWATCUP(object):
 
     def __del__(self):
         # Kills any async task that might be running
-        self.sufi2_run_async_kill();
+        self.sufi2_async_kill();
 
     def set_project_folder(self, path):
         """ Set the project folder
