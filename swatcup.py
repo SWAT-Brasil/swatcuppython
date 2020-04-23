@@ -126,7 +126,7 @@ class SWATCUP(object):
         else:
             self.async_process = self.wrapper.sufi2_async_post(self.project_folder_path)
 
-    def sufi2_run_async_kill(self):
+    def sufi2_async_kill(self):
         if self.sufi2_async_is_running():
             logger.debug("Found a running SUFI2 process running. Killing it!")
             self.async_process.kill()
