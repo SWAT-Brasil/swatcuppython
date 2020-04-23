@@ -51,7 +51,8 @@ class SWATCUP2019(ModuleInterface):
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Pre.bat", "SUFI2_Pre.bat"))
             #return subprocess.call(cmd, cwd=path, shell=True)
-            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
+                                       stdout=subprocess.PIPE, universal_newlines=True)
             for line in process.stdout:
                 sys.stdout.write(line)
             return process.returncode
@@ -65,7 +66,8 @@ class SWATCUP2019(ModuleInterface):
         if self.linux():
             cmd = os.path.join(path, "SUFI2_Run.bat")
             #return subprocess.call(cmd, cwd=path, shell=True)
-            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
+                                       stdout=subprocess.PIPE, universal_newlines=True)
             for line in process.stdout:
                 sys.stdout.write(line)
             return process.returncode
@@ -79,7 +81,8 @@ class SWATCUP2019(ModuleInterface):
         if self.linux():
             cmd = os.path.join(path, self.get_os_filename("SUFI2_Post.bat", "SUFI2_Post.bat"))
             #return subprocess.call(cmd, cwd=path, shell=True)
-            process = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE, universal_newlines=True)
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
+                                       stdout=subprocess.PIPE, universal_newlines=True)
             for line in process.stdout:
                 sys.stdout.write(line)
             return process.returncode
