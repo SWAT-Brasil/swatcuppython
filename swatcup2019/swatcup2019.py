@@ -138,7 +138,7 @@ class SWATCUP2019(ModuleInterface):
         """
         if self.linux():
             # Execution permission
-            logger.debug("Setting files permission")
+            logger.debug("Setting files permission for linux")
             os.chmod(os.path.join(path, "swat.exe"), stat.S_IXOTH)
             os.chmod(os.path.join(path, "SUFI2_execute.exe"), stat.S_IXOTH)
             os.chmod(os.path.join(path, "SWAT_Edit.exe"), stat.S_IXOTH)
