@@ -1,4 +1,5 @@
 import logging
+import stat
 import time
 from abc import ABC
 
@@ -116,6 +117,40 @@ class SWATCUP2019(ModuleInterface):
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Post.bat")
             return subprocess.Popen([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+    def set_permissions(self, path):
+        """
+        Sets proper file permissions for execution under linux. Colab requires that
+        :return:
+        """
+        if self.linux():
+            # Execution permission
+            logger.debug("Setting files permission")
+            os.chmod(os.path.join(path, "swat.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_execute.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SWAT_Edit.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_95ppu.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "95ppu_NO_Obs.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_goal_fn.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_new_pars.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_95ppu_beh.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_LH_sample.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_make_input.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_extract_hru.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_extract_rch.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_extract_sub.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "extract_hru_No_Obs.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "extract_rch_No_Obs.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "extract_sub_No_Obs.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "extract_hru_Yield_annual_No_Obs_subAvg.exe"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_Pre.bat"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_Run.bat"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_Post.bat"), stat.S_IXOTH)
+            os.chmod(os.path.join(path, "SUFI2_extract.bat"), stat.S_IXOTH)
+
+
+
+
 
     def sufi2_lh_sample(self, path):
         logger.debug("Running SUFI2_LH_sample")

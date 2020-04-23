@@ -92,6 +92,7 @@ class SWATCUP(object):
             raise ValueError("Project folder not found: " + path)
         self.project_folder_path = path
         logger.info("Project folder found: " + path)
+        self.wrapper.set_permissions(path)
         # Cria diretorio de operacao swatcuppython se ainda não existe
         self.swatcuppython_base_folder_path = os.path.join(self.project_folder_path,
                                                            self.swatcuppython_base_folder_name)
