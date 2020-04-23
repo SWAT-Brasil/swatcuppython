@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Set execution permission for linux files. In Colab you should give the permission 
+# Set execution permission for linux files. In Colab you should give the permission
+# teste
 DIR="$1"
 chmod +x "$DIR/swat.exe"
 chmod +x "$DIR/SUFI2_execute.exe"
