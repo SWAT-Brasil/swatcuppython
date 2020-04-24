@@ -65,15 +65,19 @@ class SWATCUP2019(ModuleInterface):
     def sufi2_run(self, path):
         logger.debug("Running sufi2_run")
         if self.linux():
-            cmd = os.path.join(path, "SUFI2_Run.bat")
+            cmd = os.path.join(path, "SUFI2_execute.exe")
             #return subprocess.call(cmd, cwd=path, shell=True)
-            #process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
-            #                           stdout=subprocess.PIPE, universal_newlines=True)
-            #for line in process.stdout:
-            #    sys.stdout.write(line)
+            # Se utiliza o stdout a formatacao se perde do texto. Precisa usar sem nada,
+            # e tirar o shel para funcionar, mas ai o bat para de funcioar pois ele usa o shell
+            # somente chamando as funções individualmente consegue fazer isso funcionar
+            process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
+                                       stdout=subprocess.PIPE, universal_newlines=True)
+            for line in process.stdout:
+                sys.stdout.write(line)
+            return process.returncode
+            #process = subprocess.run([cmd], capture_output=True)
+            #process.wait()
             #return process.returncode
-            process = subprocess.Popen(cmd, shell=True, cwd=path)
-            return process.wait()
 
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Run.bat")
