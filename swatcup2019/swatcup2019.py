@@ -142,6 +142,8 @@ class SWATCUP2019(ModuleInterface):
             cmd = os.path.join(path, "SUFI2_Post.bat")
             return subprocess.Popen([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
+
+    ######## Util methods ##################
     def copy_output(self, project_folder, dst):
         shutil.copytree(os.path.join(project_folder, 'SUFI2.OUT'), dst)
 
@@ -204,7 +206,7 @@ class SWATCUP2019(ModuleInterface):
         self.run_os_filename(path, self.get_os_filename("SUFI2_95ppu_beh.exe", "SUFI2_95ppu_beh.exe"))
 
     def read_sufi2_out_goal(self, path: str):
-        file = "/media/jairo/Dados/Jairo/Projetos/SWAT/git/SWATPython/sufi2.Sufi2.SwatCup/SUFI2.OUT/goal.txt"
+        file = os.path.join(path, 'SUFI2.OUT/goal.txt')
         fo = open(file, "r")
         # Le informacoes das primeiras linhas
         line1 = re.findall(r"[^\s\,!?;'\"]+", fo.readline())
@@ -230,9 +232,44 @@ class SWATCUP2019(ModuleInterface):
                 "no_sims": simulation_number,
                 "type_of_goal_fn": goal_type}
 
-        print(info)
-        # Le informações da tabela
-        # data_widths = [5] + [9] * param_count
         df = pd.read_csv(fo, header=0, delim_whitespace=True)
-        print(df)
+        return info, df
+
+    def read_sufi2_var_file_name(self, path):
+        file = os.path.join(path, 'SUFI2.IN/var_file_name.txt')
+        fo = open(file, "r")
+        file_names = [line.rstrip() for line in fo.readlines()]
+        fo.close()
+        folder = os.path.join(path, 'SUFI2.OUT')
+        var_file_names_path = [os.path.join(folder, file) for file in file_names]
+        return file_names
+
+    def read_sufi2_var(self, path, file_name):
+        file_path = os.path.join('SUFI2.OUT', file_name)
+        fo = open(os.path.join(path,file_path),"r")
+        iterations = []
+        data = []
+        index = []
+        data_index = -1
+        new_col = True
+        for line in fo:
+            list = line.split()
+            if len(list) == 1:
+                # numero da iteracao
+                iterations.append(int(list[0]))
+                new_col = True
+                data.append([])
+                index.append([])
+                data_index += 1
+            if len(list) == 2:
+                # dados
+                time_step = int(list[0])
+                value = float(list[1])
+                data[data_index].append(value)
+                index[data_index].append(time_step)
+
+        fo.close()
+        # TODO: this assume the file is correct and with all values. Make it more robust in the future
+        df = pd.DataFrame(columns=iterations, index=index[0], data=numpy.transpose(data))
+        return df
 

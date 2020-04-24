@@ -103,10 +103,10 @@ class SWATCUP(object):
             logger.info("Found swatcuppython folder: " + self.swatcuppython_base_folder_path)
 
     def sufi2_pre(self):
-        self.wrapper.sufi2_pre(self.project_folder_path)
+        return self.wrapper.sufi2_pre(self.project_folder_path)
 
     def sufi2_run(self):
-        self.wrapper.sufi2_run(self.project_folder_path)
+        return self.wrapper.sufi2_run(self.project_folder_path)
 
     def sufi2_async_pre(self):
         logger.debug("SUFI2_async_pre started")
@@ -151,13 +151,20 @@ class SWATCUP(object):
 
 
     def sufi2_post(self):
-        self.wrapper.sufi2_post(self.project_folder_path)
+        return self.wrapper.sufi2_post(self.project_folder_path)
 
     def read_sufi2_out_goal(self):
-        self.wrapper.read_sufi2_out_goal(os.path.join(self.project_folder_path), "/SUFI2.OUT/goal.txt")
+        return self.wrapper.read_sufi2_out_goal(self.project_folder_path)
 
     def copy_output(self, dst_path):
         self.wrapper.copy_output(self.project_folder_path, dst_path)
+
+    def read_sufi2_var_file_name(self):
+        return self.wrapper.read_sufi2_var_file_name(self.project_folder_path)
+
+    def read_sufi2_var(self, file_name):
+        return self.wrapper.read_sufi2_var(self.project_folder_path, file_name)
+
         #shutil.copytree(os.path.join(MODEL_FOLDER, 'SUFI2.OUT'), os.path.join(OUTPUT_SCENARIOS_FOLDER, input_path))
 
     ################ Rotinas utilizadas no processamento paralelo - ainda não funciona #################

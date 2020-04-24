@@ -26,12 +26,16 @@ nomes de arquivos de forma consistente.
 iguais para cada variavel, mas combina ele de forma diferente. Para um mesmo conjunto
 de parametros os valores de saída são próximos, mas não iguais. A implementação deve ser 
 ligeiramente diferente.
+- A formatacao do texto de saida do swat é perdida no linux e pode ficar bagunçada. Não é trivial fazer isso funcionar
+direito devido aos PIPES utilizados quando chama a função. É possível corrigir isso para o SWAT_Edit.exe individualmente,
+mas quando chama o SUFI2_Run.bat ou SUFI2_execute.exe não funciona corretamente.
 
 ## TODO
 - Processamento paralelo
 - Funcionar no Windows
 - Fazer um check entre o numero de rodadas do par_inf e swEDIT, eles precisam 
 ser iguais e é uma boa fonte de erro
+
 
 
 
