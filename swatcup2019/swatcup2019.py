@@ -1,4 +1,5 @@
 import logging
+import shutil
 import stat
 import sys
 import time
@@ -66,11 +67,14 @@ class SWATCUP2019(ModuleInterface):
         if self.linux():
             cmd = os.path.join(path, "SUFI2_Run.bat")
             #return subprocess.call(cmd, cwd=path, shell=True)
-            process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
-                                       stdout=subprocess.PIPE, universal_newlines=True)
-            for line in process.stdout:
-                sys.stdout.write(line)
-            return process.returncode
+            #process = subprocess.Popen(cmd, shell=True, cwd=path, stderr=subprocess.STDOUT,
+            #                           stdout=subprocess.PIPE, universal_newlines=True)
+            #for line in process.stdout:
+            #    sys.stdout.write(line)
+            #return process.returncode
+            process = subprocess.Popen(cmd, shell=True, cwd=path)
+            return process.wait()
+
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Run.bat")
             logger.info('Opening another window, otherwise swat-edit does not work')
@@ -133,6 +137,9 @@ class SWATCUP2019(ModuleInterface):
         if self.windows():
             cmd = os.path.join(path, "SUFI2_Post.bat")
             return subprocess.Popen([cmd], cwd=path, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+    def copy_output(self, project_folder, dst):
+        shutil.copytree(os.path.join(project_folder, 'SUFI2.OUT'), dst)
 
     def set_permissions(self, path):
         """

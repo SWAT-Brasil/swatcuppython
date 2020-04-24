@@ -109,18 +109,21 @@ class SWATCUP(object):
         self.wrapper.sufi2_run(self.project_folder_path)
 
     def sufi2_async_pre(self):
+        logger.debug("SUFI2_async_pre started")
         if self.sufi2_async_is_running():
             raise ValueError("SUFI2 is already running")
         else:
             self.async_process = self.wrapper.sufi2_async_pre(self.project_folder_path)
 
     def sufi2_async_run(self):
+        logger.debug("SUFI2_async_run started")
         if self.sufi2_async_is_running():
             raise ValueError("SUFI2 is already running")
         else:
             self.async_process = self.wrapper.sufi2_async_run(self.project_folder_path)
 
     def sufi2_async_post(self):
+        logger.debug("SUFI2_async_post started")
         if self.sufi2_async_is_running():
             raise ValueError("SUFI2 is already running")
         else:
@@ -152,6 +155,10 @@ class SWATCUP(object):
 
     def read_sufi2_out_goal(self):
         self.wrapper.read_sufi2_out_goal(os.path.join(self.project_folder_path), "/SUFI2.OUT/goal.txt")
+
+    def copy_output(self, dst_path):
+        self.wrapper.copy_output(self.project_folder_path, dst_path)
+        #shutil.copytree(os.path.join(MODEL_FOLDER, 'SUFI2.OUT'), os.path.join(OUTPUT_SCENARIOS_FOLDER, input_path))
 
     ################ Rotinas utilizadas no processamento paralelo - ainda não funciona #################
     # def sufi2_pre(self, process: int):
